@@ -1,0 +1,253 @@
+:root {
+  --primary-color: #2c3639;
+  --secondary-color: #3f4e4f;
+  --text-color: #eeeeee;
+  --ternary-color: #a5c9ca;
+  --box-color: #2a3839ba;
+  --outcast-color: #a27b5c;
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-ternary-color {
+  background-color: var(--ternary-color);
+}
+
+.bg-outcast-color {
+  background-color: var(--outcast-color);
+}
+
+.bg-box-color {
+  background-color: var(--box-color);
+}
+
+.text-primary-color {
+  color: var(--primary-color);
+}
+
+.text-secondary-color {
+  color: var(--secondary-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.text-ternary-color {
+  color: var(--ternary-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* navigation bar */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  position: sticky;
+  top: 0px;
+  overflow-x: hidden;
+  z-index: 50;
+}
+
+.navbar-brand {
+  color: var(--outcast-color);
+  font-family: "Kalam", cursive;
+  cursor: pointer;
+}
+.navbar-brand :hover {
+  color: var(--outcast-color);
+}
+
+/* search button */
+.fas {
+  color: var(--ternary-color);
+}
+
+#navbar_search {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 0.5px solid var(--secondary-color);
+}
+
+#navbar_search::placeholder {
+  color: var(--ternary-color);
+}
+/* nav bar end  */
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w3-container {
+  width: 100%;
+}
+
+.cont {
+  width: 500px;
+  margin-top: 100px;
+}
+
+/* ---------------------------------------------------- login page css starts --------------------------------------------------------- */
+#login_sign_btn {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  box-shadow: none;
+  border: 0px;
+}
+
+#form_label_signin {
+  color: var(--ternary-color);
+}
+
+#form2Example2,
+#form2Example1 {
+  color: var(--outcast-color);
+}
+
+/* ---------------------------------------------------- login page css end ------------------------------------------------------------ */
+
+#container_box_new_post {
+  /* background-color: var(--box-color); */
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 1em;
+  width: 97%;
+}
+
+#post_container_box {
+  background-color: var(--box-color);
+  padding: 1em;
+  width: 97%;
+}
+
+#footer_slider {
+  margin-bottom: 50px;
+}
+
+/*---------------------------------------------------- put button inside the button  ---------------------------------------------- */
+.icon-input-btn {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+}
+.icon-input-btn input[type="submit"] {
+  padding-left: 0px;
+}
+.icon-input-btn .fa,
+.icon-input-btn .bi {
+  display: inline-block;
+  position: absolute;
+  left: 0em;
+  top: 30%;
+}
+
+/* ---------------------------------------------------- button inside the button end ------------------------------------------------ */
+
+#title_input {
+  font-size: x-large;
+  font-weight: 600;
+  color: var(--outcast-color);
+}
+
+#title_input::placeholder,
+#tags_input::placeholder,
+#desc_input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#tags_input {
+  color: var(--text-color);
+  font-size: larger;
+  font-weight: 500;
+}
+
+#desc_input {
+  height: 300px;
+}
+
+textarea {
+  resize: none;
+  /* overflow: hidden; */
+  min-height: 50px;
+  max-height: 150px;
+}
+
+#desc_input:focus,
+#title_input:focus,
+#tags_input:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/*-------------------------------------------------------------- overview php -------------------------------------------------------- */
+
+#overview_container_box, #overview_view {
+  display: flex;
+  width: 97%;
+  padding: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#time_selecter,
+#day_selecter,
+#ratings_selecter,
+#course_selector, .selector_cls {
+  width: 23%;
+  background: var(--secondary-color);
+  border: none;
+  color: var(--ternary-color);
+  padding: 5px;
+}
+
+#time_selecter:focus {
+  border: none;
+  box-shadow: none;
+}
+
+#selector_section {
+  width: 97%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+  #selector_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #time_selecter,
+  #day_selecter,
+  #ratings_selecter,
+  #course_selector, .selector_cls {
+    width: 65%;
+    margin: 5px;
+  }
+}
